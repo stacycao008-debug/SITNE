@@ -1,0 +1,9 @@
+method	fold	seed	pair_key	relation_id	rank	degree_stratum	frequency_stratum	support_status
+sitne_walk	0	42	A|B	r1	1	low	rare	supported
+sitne_walk	0	123	A|B	r1	2	low	rare	supported
+sitne_walk	0	42	A|C	r2	2	medium	common	supported
+sitne_walk	0	123	A|C	r2	2	medium	common	supported
+sitne_walk	1	42	B|D	r1	1	high	rare	supported
+sitne_walk	1	123	B|D	r1	1	high	rare	supported
+sitne_walk	1	42	C|E	r3	3	high	common	supported
+sitne_walk	1	123	C|E	r3	2	high	common	supported

@@ -1,0 +1,11 @@
+protein_i	protein_j	type_name
+A	B	r1
+A	B	r2
+B	C	r1
+C	D	r2
+D	E	r3
+A	E	r3
+B	D	r2
+C	E	r1
+A	F	r1
+B	F	r3

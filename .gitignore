@@ -1,0 +1,81 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+
+# ---- Jupyter / IPython ----
+.ipynb_checkpoints/
+
+# ---- OS / IDE ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ---- R (if any) ----
+.Rhistory
+.RData
+.Rproj.user/
+
+# ---- Runtime output (regenerated; final artifacts live in analysis/) ----
+08_results/
+logs/
+
+# ---- Large / licensed data & model artifacts ----
+# Real PPI datasets are licensed separately (see data/DATA_CARD.md).
+# Keep real datasets and model checkpoints out of the source repository.
+data/raw/
+02_data_canonical/
+03_data_processed/
+05_splits/
+*.fastq
+*.fastq.gz
+*.bam
+*.bai
+*.cram
+*.h5ad
+*.parquet
+*.npz
+*.npy
+*.pt
+*.pth
+*.db
+*.sqlite3
+
+# ---- Archives / logs / temp ----
+*.log
+*.tmp
+*.zip
+Handoff.zip
+
+# ---- Secrets ----
+.env
+*.key
+*.pem
+credentials*
+secrets*
+
+# ---- Local manuscript drafts and internal handoff material ----
+# Keep working notes in the local project; do not include them in the public release.
+analysis/results/RESULTS_4_*.md
+analysis/results/RESULTS_OVERVIEW.md
+analysis/final_tables/RESULTS_FOR_MANUSCRIPT_TEMPLATE.md
+docs/method_description/
+docs/reproducibility/dataset_bx_v1/EXPERIMENT_RETURN_REPORT_TEMPLATE.md
+docs/reproducibility/dataset_bx_v1/SERVER_RUNBOOK_CN.md
+
+# Case-study outputs are pending expert review.
+analysis/figures/figure_8_case_studies.*

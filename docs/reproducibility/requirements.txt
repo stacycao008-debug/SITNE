@@ -1,0 +1,27 @@
+# PPI Interaction Type Prediction — Python Dependencies
+# Python 3.10+
+# 角色：复现冻结快照（随 2026-07-26 导出包冻结，勿改动）。
+# 日常开发以根目录 requirements.txt 为准；两者有意区分角色，不强制同步。
+
+# Core numeric
+numpy>=1.24
+pandas>=2.0
+scipy>=1.11
+
+# ML
+scikit-learn>=1.3
+torch>=2.0
+
+# Graph deep learning (optional, for M4+ models)
+# torch-geometric>=2.4  # uncomment if PyG installed
+
+# Config
+pyyaml>=6.0
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+
+# Utilities
+tqdm>=4.65
+requests>=2.28

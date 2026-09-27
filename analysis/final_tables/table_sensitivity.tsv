@@ -1,0 +1,24 @@
+group	metric	value	n
+formal	micro_mrr	0.9807517710428406	5 folds
+formal	macro_mrr	0.8061127340866097	5 folds
+formal	single_type_mrr	0.9814551673006988	5 folds
+formal	multi_type_mrr	0.9720638975812609	5 folds
+formal	relationwise_enzymatic	0.6684654581208197	5 folds
+formal	relationwise_general	0.7107024126605521	5 folds
+formal	relationwise_physical	0.9942439965968894	5 folds
+formal	relationwise_spatial	0.8510390689681773	5 folds
+ablation_alpha0	micro_mrr	0.9807414123046525	1 seed
+ablation_alpha0	macro_mrr	0.8083702631416876	1 seed
+ablation_no_semantic	micro_mrr	0.9806062571636887	1 seed
+ablation_no_semantic	macro_mrr	0.7889468786724982	1 seed
+ablation_no_decorr	micro_mrr	0.9806239317833534	1 seed
+ablation_no_decorr	macro_mrr	0.8144488218180952	1 seed
+ablation_no_adversary	micro_mrr	0.980916652828385	1 seed
+ablation_no_adversary	macro_mrr	0.8084239283103101	1 seed
+ablation_no_rank	micro_mrr	0.5320480883491668	1 seed
+ablation_no_rank	macro_mrr	0.5688507769964741	1 seed
+formal	degree_strata_0_10	0.9738150445266898	5 folds
+formal	degree_strata_10_100	0.9779629759297273	5 folds
+formal	degree_strata_100_1000	0.986957023920897	5 folds
+formal	freq_strata_100_1000	0.6964522640834094	5 folds
+formal	freq_strata_1000_inf	0.9828747740171716	5 folds

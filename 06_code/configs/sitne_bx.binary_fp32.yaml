@@ -1,0 +1,54 @@
+# Dataset B binary-only / CUDA FP32。B* typed auxiliary 不参与；Train pair/sequence
+# 仍通过 B* 七项 allow-list 的冻结投影读取。
+data:
+  dataset_b_root: "02_data_canonical/dataset_B/v1"
+  # binary label 仍来自 B 的冻结投影；Train pair/sequence 走 B* 七项 allow-list，
+  # 但 typed_level=none，不读取任何 typed edge。
+  dataset_bstar_root: "02_data_canonical/dataset_Bstar/v2"
+  dataset_uid: "BERNETT_V3_FULL_PAPER_SPLIT_V1"
+  xstar_uid: "BERNETT_V3_FULL_PAPER_SPLIT_XSTAR_V2"
+  typed_level: "none"
+  verify_hashes: true
+model:
+  backend: "chunked_sequence"
+  embedding_dim: 128
+  token_embedding_dim: 64
+  pair_hidden_dim: 256
+  chunk_size: 1024
+  chunk_stride: 768
+  chunk_batch_size: 16
+  convolution_kernel_size: 5
+  dropout: 0.1
+  precomputed_dimension: null
+  precomputed_train_path: null
+  precomputed_validation_path: null
+  precomputed_test_path: null
+loss:
+  binary_weight: 1.0
+  topology_weight: 0.1
+  typed_weight: 0.0
+topology:
+  walk_length: 8
+  walks_per_node: 1
+  context_window: 2
+  context_batch_size: 32
+training:
+  device: "cuda"
+  allow_cpu_for_testing: false
+  seed: 42
+  epochs: 20
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  gradient_clip_norm: 5.0
+  use_amp: false
+  amp_dtype: "float16"
+  deterministic: true
+  allow_tf32: false
+  max_batches_per_epoch: null
+  output_dir: "08_results/sitne_bx"
+evaluation:
+  batch_size: 64
+  selection_metric: "auprc"
+  threshold_metric: "mcc"
+  expected_test_rows: 52048

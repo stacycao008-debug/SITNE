@@ -1,0 +1,14 @@
+claim_id	section	claim	supporting_artifact	evidence_status
+C-4.2-1	4.2	SITNE-Walk improves filtered MRR over baselines	r2_main_performance/optimal + paired_effects.tsv	SUPPORTED (p=0.062 vs frequency, p=0.062 vs metapath2vec, p=0.062 vs typed_skipgram)
+C-4.2-2	4.2	Improvement exceeds uncorrected walk	r3_ablation/uncorrected vs full	NOT_SUPPORTED (Δ=-0.0001, CI spans zero)
+C-4.2-3	4.2	Result not driven by one frequent relation	test_metrics relation/*/mrr	SUPPORTED (macro relation MRR=0.806, range 0.661-0.994)
+C-4.4-1	4.4	Ranking objective is the dominant component	r3_ablation/no_rank Δ=-0.517	SUPPORTED
+C-4.4-2	4.4	Label integrity matters	r3_ablation/shuffled_type Δ=-0.018	SUPPORTED (p=0.062)
+C-4.4-3	4.4	Degree/frequency correction contributes	r3_ablation/uncorrected Δ=-0.0001	NOT_SUPPORTED in coarse 4-type setting
+C-4.5-1	4.5	Alias sampler numerically faithful	r1 parameter grid MAE≈0.004	SUPPORTED
+C-4.5-2	4.5	Correction reduces degree exposure	r1 grid: deg ρ -0.148 → -0.339	NOT_SUPPORTED (correction increased |degree correlation|)
+C-4.7-1	4.7	Shortcut recoverability bounded	r4 probe_comparison.tsv	SUPPORTED (degree acc full=0.415±0.027 vs uncorrected=0.427±0.009, Δ=-0.012 not significant; freq R² full=0.571 vs uncorrected=0.556)
+C-4.7-2	4.7	Performance not confined to hubs	r4 strata_analysis.tsv	SUPPORTED (very_high degree stratum best, not worst)
+C-4.7-3	4.7	Transductive boundary	r4 coverage_boundary.tsv	SUPPORTED (98.9% coverage, 1,495 unsupported)
+C-4.8-1	4.8	Semantic representation maps to GO/Reactome	biology/enrichment/{go,reactome}_enrichment.tsv + figures/figure_7 + table_5	PARTIAL_SUPPORTED (enzymatic/general/spatial enrich significantly; physical has no FDR<0.05 term because its foreground≈background; coarse 4-type limits resolution)
+C-4.9-1	4.9	Relation prioritization matches external evidence	case_studies/case_candidates.tsv + case_studies_report.md (frozen 1080 pairs, evidence pending)	PENDING_EXPERT_REVIEW

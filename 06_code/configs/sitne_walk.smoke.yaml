@@ -1,0 +1,69 @@
+# 仅验证代码路径的最小运行配置；不得把输出作为科研结果。
+data:
+  train_path: "05_splits/split1_random/train.tsv"
+  validation_path: "05_splits/split1_random/validation.tsv"
+  test_path: null
+  split_manifest_path: "05_splits/split1_random/split_manifest.json"
+  require_manifest_hashes: false
+  all_known_positive_paths: []
+  relation_metadata_path: null
+  relation_hierarchy_path: null
+  weight_column: null
+  duplicate_policy: "binary"
+  pair_semantics: "unordered"
+  default_relation_mode: "symmetric"
+  drop_self_loops_from_walks: true
+
+walk:
+  alpha: 0.5
+  beta: 0.5
+  epsilon: 1.0e-12
+  walk_length: 8
+  walks_per_protein: 1
+  walk_batch_size: 32
+  context_window: 2
+  negative_samples: 2
+  negative_distribution: "unigram"
+  unigram_power: 0.75
+  max_topology_pairs_per_batch: 2048
+
+model:
+  embedding_dim: 32
+  decoder_dropout: 0.0
+  nuisance_hidden_dim: 32
+  nuisance_heads: ["degree"]
+
+loss:
+  lambda_typed: 1.0
+  lambda_decorr: 0.01
+  lambda_adversary: 0.1
+  lambda_rank: 1.0
+  lambda_hierarchy: 0.0
+  gradient_reversal_coefficient: 1.0
+  rank_margin: 0.0
+  hierarchy_margin: 0.0
+
+training:
+  device: "auto"
+  seed: 42
+  epochs: 1
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  gradient_clip_norm: 5.0
+  rank_batch_size: 64
+  early_stopping_patience: 1
+  evaluation_batch_size: 2048
+  use_amp: false
+  amp_dtype: "float16"
+  deterministic: true
+  allow_tf32: false
+  max_steps_per_epoch: 2
+  log_interval: 1
+  output_dir: "08_results/sitne_walk_smoke"
+
+evaluation:
+  tie_policy: "average"
+  hits_at: [1, 3, 10]
+  # 历史 split 含少量 train-unseen protein/relation；SMOKE 只验证支持子集路径。
+  require_full_coverage: false
+

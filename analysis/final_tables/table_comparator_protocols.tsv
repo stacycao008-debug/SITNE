@@ -1,0 +1,7 @@
+method	tier	tuning_trials	search_space	validation_data	seeds	early_stopping	selected_metric	fairness_gap
+SITNE-Walk (formal)	Tier-1	0 (fixed config)	fixed (optimal.yaml)	per-fold val (checkpoint selection only)	42/123/456	patience=5 on val MRR	filtered MRR	基准（3 seeds）
+frequency prior	Tier-1	0 (deterministic)	n/a (train freq)	train-only	deterministic	n/a	filtered MRR	deterministic replay 需补 per-query
+typed skip-gram	Tier-1	50 Optuna trials/fold	walk_length/walks_per_protein/context/embedding/neg/lr/epochs/phase2	margin	per-fold val	3 seeds	Optuna best val MRR	filtered MRR	tuning budget 不一致（50 trials/fold）
+metapath2vec	Tier-1	0 (fixed)	fixed	per-fold val	42 only	1 epoch 固定	filtered MRR	仅 1 seed 1 epoch
+ComplEx	Tier-2	0 (fixed)	fixed (dim=512)	per-fold val	42 only	patience on val MRR	filtered MRR	仅 1 seed，固定配置
+DistMult	Tier-2	0 (fixed)	fixed (dim=512)	per-fold val	42 only	patience on val MRR	filtered MRR	仅 1 seed，固定配置

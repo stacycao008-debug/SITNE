@@ -1,0 +1,13 @@
+Statistic	Value
+Total unique protein pairs	128273
+Total pair-type facts	133363
+Total unique proteins	10642
+Total relation types (coarse)	4
+Outer folds	5
+Inner folds (per outer)	3
+CV split seed	20240101
+Avg train pairs per fold	92357
+Avg test pairs per fold	25655
+Avg val pairs per fold	10261
+Mean val protein coverage	98.2%
+Mean test protein coverage	97.0%

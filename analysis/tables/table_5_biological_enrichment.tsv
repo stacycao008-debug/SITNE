@@ -1,0 +1,9 @@
+annotation	relation	n_significant	top_term	top_term_name	top_FDR	top_overlap
+GO	enzymatic	510	GO:0004672	protein kinase activity	1.59e-33	59
+GO	general	1093	GO:0005654	nucleoplasm	8.82e-63	349
+GO	physical	0				
+GO	spatial	878	GO:0003723	RNA binding	1.76e-122	683
+Reactome	enzymatic	142	R-HSA-6807004	Negative regulation of MET activity	0.000162	6
+Reactome	general	449	R-HSA-2467813	Separation of Sister Chromatids	1.54e-15	46
+Reactome	physical	0				
+Reactome	spatial	363	R-HSA-72706	GTP hydrolysis and joining of the 60S ribosomal subunit	1.64e-29	92

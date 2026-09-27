@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as described below."
+title: "SITNE-Walk: Shortcut-Invariant Typed Network Embedding with Corrected Walks"
+authors:
+  - family-names: Cao
+    given-names: Mei-Yuan
+    orcid: "https://orcid.org/0000-0002-5936-2765"
+    email: "caomeiyuan@gdust.edu.cn"
+    affiliation: "School of Computer Science and Artificial Intelligence (Industrial Software), Guangdong University of Science and Technology, Dongguan 523668, China"
+  - family-names: Zainudin
+    given-names: Suhaila
+    orcid: "https://orcid.org/0000-0003-2352-5312"
+    affiliation: "Center for Artificial Intelligence Technology (CAIT), Faculty of Information Science and Technology, Universiti Kebangsaan Malaysia (UKM), 43600 Bangi, Selangor, Malaysia"
+version: 1.0.0
+date-released: "2026-09-27"
+license: MIT
+keywords:
+  - network embedding
+  - protein-protein interaction
+  - relation ranking
+  - corrected random walks
+  - PyTorch
+  - CUDA
+repository-code: "https://github.com/leon-lg-wong/SITNE"

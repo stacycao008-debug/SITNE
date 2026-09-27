@@ -1,0 +1,17 @@
+method	fold	seed	pair_key	relation_id	rank
+sitne_walk	0	42	A|B	r1	1
+sitne_walk	0	123	A|B	r1	2
+sitne_walk	0	42	A|C	r2	2
+sitne_walk	0	123	A|C	r2	2
+sitne_walk	1	42	B|D	r1	1
+sitne_walk	1	123	B|D	r1	1
+sitne_walk	1	42	C|E	r3	3
+sitne_walk	1	123	C|E	r3	2
+baseline	0	42	A|B	r1	2
+baseline	0	123	A|B	r1	3
+baseline	0	42	A|C	r2	3
+baseline	0	123	A|C	r2	4
+baseline	1	42	B|D	r1	2
+baseline	1	123	B|D	r1	2
+baseline	1	42	C|E	r3	4
+baseline	1	123	C|E	r3	5

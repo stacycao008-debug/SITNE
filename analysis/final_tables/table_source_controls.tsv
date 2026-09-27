@@ -1,0 +1,5 @@
+relation	total_events	max_source	max_source_share	exclusive
+enzymatic	432	SRC:INTACT_R252	1.0	true
+general	861	SRC:BIOGRID_5_0_259	0.7712	false
+physical	228922	SRC:BIOGRID_5_0_259	0.7431	false
+spatial	13936	SRC:BIOGRID_5_0_259	0.9184	false
