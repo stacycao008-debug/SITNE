@@ -112,11 +112,12 @@ files, and records environment, input hashes, and RNG state for provenance.
 - **Dataset B**: not redistributed here; see Bernett et al. (DOI
   10.1093/bib/bbae076) for the original dataset and its access terms.
 - **Model checkpoints**: not included in this repository.
-- **Dataset B\***: derived from BioGRID 4.4.240 (CC BY-SA 4.0) combined with
-  the Bernett split; the combined derivative is **not publicly redistributed**
-  pending a combined-source license review. Raw interactions are available
-  from BioGRID (https://downloads.thebiogrid.org) and can be rebuilt with
-  `data_download/fetch_and_build_datasets.sh`.
+- **Dataset B\***: built using BioGRID 5.0.259 and IntAct R252, together with
+  the Bernett split. The inventory records BioGRID as CC BY-SA 4.0, but author
+  confirmation of the downloaded release's license is pending. The combined
+  derivative is **not publicly redistributed** pending a combined-source
+  license review. See `DATA_CARD.md` and `data_inventory.csv` for the recorded
+  versions, access date, and license status.
 - **External annotations** (GO, Reactome, UniProt): public databases; versions
   and accessions are listed in `data/DATA_CARD.md`.
 

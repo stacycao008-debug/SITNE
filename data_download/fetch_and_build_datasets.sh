@@ -8,9 +8,10 @@
 #    obtain from GigaDB / Zenodo (accession to be added), then place the
 #    contents under 02_data_canonical/dataset_B/v1/.
 #
-# 2) Dataset B* (BioGRID 4.4.240, CC BY-SA 4.0 — combined review pending):
-#    download the BioGRID interaction export and rebuild the typed split
-#    locally. Do NOT publicly redistribute the combined derivative.
+# 2) Dataset B* (BioGRID 5.0.259, IntAct R252; license review pending):
+#    download source interaction records and rebuild the typed split locally.
+#    BioGRID is recorded as CC BY-SA 4.0, pending author confirmation against
+#    the downloaded release. Do NOT redistribute the combined derivative yet.
 #
 # 3) External annotations (GO, GOA, Reactome → UniProt).
 
@@ -19,7 +20,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 mkdir -p "$ROOT/02_data_canonical/external_annotations"
 
-echo "[1/3] BioGRID 4.4.240 interaction export"
+echo "[1/3] BioGRID 5.0.259 interaction export"
 echo "  Download from https://downloads.thebiogrid.org (registration may be"
 echo "  required for the archive). Place the MITAB/PSI-MI file under:"
 echo "    02_data_canonical/dataset_Bstar/v2/edges/"

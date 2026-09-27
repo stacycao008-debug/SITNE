@@ -11,8 +11,8 @@ below.
 | Dataset | Content | Source | License | In repo? |
 |---|---|---|---|---|
 | Dataset B v1 | Binary PPI split (Bernett et al.) | Bernett et al., DOI 10.1093/bib/bbae076 | CC BY 4.0 (attribution) | No |
-| Dataset B* v2 | Typed PPI (Bernett + intact BioGRID terms) | Bernett + BioGRID 4.4.240 | BioGRID CC BY-SA 4.0 (combined review pending) | **No, internal only** |
-| Processed typed PPI | `typed_ppi_clean.{tsv,parquet}` (1,556,802 rows) | Derived from BioGRID et al. | Per-source (see below) | No |
+| Dataset B* v2 | Typed PPI (Bernett + BioGRID and IntAct evidence) | Bernett + BioGRID 5.0.259 + IntAct R252 | Per-source; BioGRID license confirmation pending | **No, internal only** |
+| Processed typed PPI | `typed_ppi_clean.{tsv,parquet}` (1,556,802 rows) | Derived from the recorded source releases | Per-source (see below) | No |
 | External annotations | GO, Reactome, UniProt mappings | public databases | GO/UniProt CC BY 4.0, Reactome CC0 | No (download URLs below) |
 | sample_data | Synthetic smoke-test data | Generated | — | Yes (`data/sample_data/`) |
 
@@ -20,8 +20,8 @@ below.
 
 | Database | Version | Access date | License | URL |
 |---|---|---|---|---|
-| BioGRID | 4.4.240 | 2026-07-17 | CC BY-SA 4.0 | https://downloads.thebiogrid.org |
-| IntAct | latest | 2026-07-17 | CC0 1.0 | https://www.ebi.ac.uk/intact/ |
+| BioGRID | 5.0.259 | 2026-07-17 (recorded; re-verification pending) | CC BY-SA 4.0 (recorded; author confirmation pending) | https://downloads.thebiogrid.org/BioGRID |
+| IntAct | R252 | 2026-07-17 (recorded) | CC0 1.0 | https://www.ebi.ac.uk/intact/ |
 | STRING | 12.0 | 2026-07-17 | CC BY 4.0 | https://string-db.org/ |
 | Reactome | latest | 2026-07-17 | CC0 1.0 | https://reactome.org/ |
 | UniProt | latest | 2026-07-17 | CC BY 4.0 | https://www.uniprot.org/ |
@@ -38,14 +38,19 @@ below.
 
 ## Dataset B* — typed PPI (restricted redistribution)
 
-- **License**: inherits Bernett (CC BY 4.0) **plus intact BioGRID source terms
-  (CC BY-SA 4.0)**. The combined derivative is currently
-  **`LOCAL_INTERNAL_ONLY`** — do not publicly redistribute until the
-  combined-source license review is complete.
-- **Access**: rebuild locally from the public BioGRID export and the Bernett
-  split using `data_download/fetch_and_build_datasets.sh`. The training loader
-  enforces a default-deny allow-list (`loader_contract.json`); held-out targets
-  must stay locked until the training state is frozen.
+- **Source versions**: BioGRID 5.0.259 and IntAct R252, as recorded in
+  `data_inventory.csv`. The inventory records 2026-07-17 as the access date;
+  the date and the exact downloaded release files still require verification.
+- **License**: the inventory records BioGRID as CC BY-SA 4.0, but this has not
+  been confirmed by the authors against the downloaded release terms. IntAct
+  R252 is recorded as CC0 1.0. The combined derivative is
+  **`LOCAL_INTERNAL_ONLY_PENDING_COMBINED_SOURCE_REVIEW`** — do not publicly
+  redistribute or describe it as CC0 until the BioGRID license and combined
+  source terms have been reviewed.
+- **Access**: rebuild locally from the BioGRID and IntAct source records and
+  the Bernett split. The training loader enforces a default-deny allow-list
+  (`loader_contract.json`); held-out targets must stay locked until the
+  training state is frozen.
 
 ## External annotations
 
