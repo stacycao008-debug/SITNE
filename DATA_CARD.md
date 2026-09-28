@@ -26,3 +26,7 @@ and IntAct `R252`, with an access date of `2026-07-17`; re-verify the access dat
 files before publication. The inventory records BioGRID as CC BY-SA 4.0, pending author confirmation
 against the downloaded release terms. Do not treat that record as a final legal determination or
 redistribute the combined benchmark before the license review is complete.
+
+These versions describe the typed evidence used to construct the benchmark. The manuscript's separate
+case-study lookup used BioGRID `5.0.260` multi-validated physical records and IntAct's current PSICQUIC
+endpoint; those lookup sources are not the dataset-construction snapshots.
