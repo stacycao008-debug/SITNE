@@ -133,14 +133,19 @@ files, and records environment, input hashes, and RNG state for provenance.
 ## Formal-code provenance
 
 Formal-run provenance records SHA-256 identities for all 17 implementation
-files. Twelve currently available implementation files remain byte-identical to
-their formal versions. The exact formal source bytes of five files (`cli.py`,
-`config.py`, `optuna_search.py`, `provenance.py`, and `trainer.py`) are no
-longer available; the current copies of those files are post-formal
-modifications. The formal hashes, resolved configurations, seeds, exact
-split/input identities, core runtime environment, frozen evaluation outputs,
-and formal provenance records remain preserved (provided with the archival
-release).
+files. In the publication release, 11 of the 17 implementation files remain
+byte-identical to their formal versions. The exact formal source bytes of five
+files (`cli.py`, `config.py`, `optuna_search.py`, `provenance.py`, and
+`trainer.py`) are no longer available; the published copies are post-formal
+modifications. One additional file, `split_builder.py`, differs only because
+its default paths were relocated during public-release preparation; its formal
+identity remains preserved. Formal hashes, configurations, seeds, exact
+inputs/splits, core runtime environment, frozen outputs, and provenance records
+remain available.
+
+Per-file comparison and category definitions:
+[`docs/reproducibility/PUBLIC_V1_FORMAL_CODE_COMPARISON.tsv`](docs/reproducibility/PUBLIC_V1_FORMAL_CODE_COMPARISON.tsv)
+and [`docs/reproducibility/FORMAL_CODE_IDENTITY.md`](docs/reproducibility/FORMAL_CODE_IDENTITY.md).
 
 ## Citation
 
