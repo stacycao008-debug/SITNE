@@ -83,7 +83,7 @@ The pipeline reads canonical data and splits, trains, and writes results under
 
 1. **Data** — obtain and prepare the datasets (see `data/DATA_CARD.md` and
    `data_download/`). Dataset B is not redistributed here. Dataset B*
-   (BioGRID-derived, CC BY-SA) must be rebuilt locally.
+   (BioGRID-derived) must be rebuilt locally.
 2. **Splits** — freeze pair-grouped 5-fold splits (SHA-256 recorded):
    `python 06_code/prepare_typed_ranking_folds.py`
 3. **Train** — `python scripts/train_all_folds_v2.py`
@@ -108,23 +108,39 @@ files, and records environment, input hashes, and RNG state for provenance.
 
 ## Data availability
 
-- **Code**: available in this repository under the MIT License.
+- **Code**: project-generated source code, available in this repository under
+  the MIT License.
+- **Project-generated benchmark / reproducibility data**: prepared for public
+  release under CC0 1.0. Original third-party raw database distributions are
+  not redistributed.
 - **Dataset B**: not redistributed here; see Bernett et al. (DOI
   10.1093/bib/bbae076) for the original dataset and its access terms.
 - **Model checkpoints**: not included in this repository.
-- **Dataset B\***: built using BioGRID 5.0.259 and IntAct R252, together with
-  the Bernett split. The inventory records BioGRID as CC BY-SA 4.0, but author
-  confirmation of the downloaded release's license is pending. The combined
-  derivative is **not publicly redistributed** pending a combined-source
-  license review. See `DATA_CARD.md` and `data_inventory.csv` for the recorded
-  versions, access date, and license status.
+- **Dataset B\***: built using BioGRID 5.0.259 (MIT License) and IntAct R252,
+  together with the Bernett split. Upstream sources are documented and cited
+  separately; their raw distributions are not redistributed. See `DATA_CARD.md`
+  and `data_inventory.csv` for recorded versions and access information.
 - **External annotations** (GO, Reactome, UniProt): public databases; versions
   and accessions are listed in `data/DATA_CARD.md`.
 
 ## License
 
 - **Code**: MIT (see `LICENSE`).
-- **Data**: per-source licenses apply; see `data/DATA_CARD.md`.
+- **Project-generated / derived data**: CC0 1.0 for project-generated and
+  released artifacts. Upstream sources remain under their own terms (not
+  relicensed); see `data/DATA_CARD.md`.
+
+## Formal-code provenance
+
+Formal-run provenance records SHA-256 identities for all 17 implementation
+files. Twelve currently available implementation files remain byte-identical to
+their formal versions. The exact formal source bytes of five files (`cli.py`,
+`config.py`, `optuna_search.py`, `provenance.py`, and `trainer.py`) are no
+longer available; the current copies of those files are post-formal
+modifications. The formal hashes, resolved configurations, seeds, exact
+split/input identities, core runtime environment, frozen evaluation outputs,
+and formal provenance records remain preserved (provided with the archival
+release).
 
 ## Citation
 

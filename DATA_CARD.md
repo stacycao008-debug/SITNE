@@ -11,21 +11,17 @@ The four observed coarse groups are `physical`, `spatial`, `general`, and `enzym
 | Source | Locked version | License | Redistribution |
 |---|---|---|---|
 | Bernett (binary parent `BERNETT_V3_FULL_PAPER_SPLIT_V1`) | `Bernett_protocols_v1` (DOI 10.1093/bib/bbae076) | CC BY 4.0 | Attribution required |
-| IntAct (typed evidence) | `R252` | CC0 1.0 | Public domain |
-| BioGRID (typed evidence) | `5.0.259` | CC BY-SA 4.0 (prior-snapshot record; PENDING author confirmation) | Combined-source review pending |
+| IntAct (typed evidence) | `R252` | Not reverified | Original files not redistributed |
+| BioGRID (typed evidence) | `5.0.259` | MIT | Permissive; retain notice |
 
-**Combined-source redistribution status:** `LOCAL_INTERNAL_ONLY_PENDING_COMBINED_SOURCE_REVIEW`.
+**Redistribution status:** project-generated and project-derived benchmark /
+reproducibility artifacts are released under CC0 1.0. Original third-party raw
+database distributions (Bernett, BioGRID, IntAct, GO/GOA, Reactome, PSI-MI)
+are not redistributed and remain subject to their respective source terms.
 
-> Legal blocker: if the downloaded BioGRID release is in fact CC BY-SA 4.0, its share-alike term
-> propagates to this derived benchmark, so a journal CC0 release is legally impossible. Confirm the
-> actual BioGRID download license at <https://downloads.thebiogrid.org/BioGRID> before any public
-> redistribution. IntAct is CC0 and imposes no such constraint.
-
-Canonical source-version records are `data_inventory.csv` and this card. Both record BioGRID `5.0.259`
-and IntAct `R252`, with an access date of `2026-07-17`; re-verify the access date and downloaded release
-files before publication. The inventory records BioGRID as CC BY-SA 4.0, pending author confirmation
-against the downloaded release terms. Do not treat that record as a final legal determination or
-redistribute the combined benchmark before the license review is complete.
+IntAct Release R252 was used as an upstream source during benchmark
+construction. The exact historical license designation was not independently
+reverified, and original IntAct distribution files are not redistributed.
 
 These versions describe the typed evidence used to construct the benchmark. The manuscript's separate
 case-study lookup used BioGRID `5.0.260` multi-validated physical records and IntAct's current PSICQUIC
